@@ -129,6 +129,7 @@ const parallaxFunc = function(){
 			if(window.innerWidth <= 480) {
 				if(scroll > window.innerHeight){
 					heroBg.style.position = "absolute";
+					heroInner.style.transform = `translateY(${scroll/50}%)`;
 				}else {
 					// heroBg.style.position = "fixed";
 				}

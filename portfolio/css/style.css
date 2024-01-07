@@ -549,6 +549,11 @@ body {
 .list-type3 li ~ li {
   padding: 10rem 0 0;
 }
+@media (max-width: 480px) {
+  .list-type3 li {
+    gap: 2rem;
+  }
+}
 .list-type3__number {
   display: flex;
   align-items: center;
@@ -592,7 +597,7 @@ body {
 }
 .list-type3 .progress {
   width: 2px;
-  height: 200px;
+  height: 20rem;
   background: rgba(231, 231, 231, 0.5);
   position: relative;
   left: 49%;
@@ -1531,6 +1536,8 @@ body {
 @media (max-width: 480px) {
   .hero {
     height: 100%;
+    background-size: 122%;
+    background-position-y: center;
   }
 }
 .hero .title-type1 {
@@ -1614,8 +1621,8 @@ body {
   position: absolute;
   right: 17%;
   top: -11%;
-  width: 80rem;
-  height: 80rem;
+  width: 95rem;
+  height: 95rem;
   border-radius: 100%;
   background-color: #DC8C73;
   /* background: url(../images/bg_introduce.png)no-repeat center; */
@@ -1650,8 +1657,8 @@ body {
   .hero-bg {
     right: -23%;
     top: -11%;
-    width: 60rem;
-    height: 60rem;
+    width: 57rem;
+    height: 57rem;
   }
 }
 
@@ -1799,22 +1806,17 @@ body {
   vertical-align: -3px;
   transform: rotate(90deg);
 }
+@media (max-width: 480px) {
+  .section-aboutMe .btn-link::after {
+    vertical-align: -6px;
+  }
+}
 
 @media screen and (max-width: 480px) {
   .section-introduce {
     height: 8000px;
   }
 }
-.section-brand {
-  height: 40rem;
-  background: rgba(231, 231, 231, 0.5);
-  text-align: center;
-  font-size: 5vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Community */
 .section-portfolio {
   /* padding-bottom: 15rem; */
@@ -1894,66 +1896,9 @@ body {
   font-size: 30px;
 }
 
-@media (max-width: 480px) {
-  .section-marketing-service .inner {
-    padding-top: 7rem;
-  }
-}
-.section-marketing-service .block__img {
-  height: 60rem;
-}
-@media (max-width: 768px) {
-  .section-marketing-service .block__img {
-    order: 1;
-  }
-}
-@media (max-width: 480px) {
-  .section-marketing-service .block__img {
-    height: 40rem;
-  }
-}
-@media (max-width: 768px) {
-  .section-marketing-service .quotation__txt {
-    position: static;
-    padding: 2rem 0 0;
-  }
-}
-@media (max-width: 768px) {
-  .section-marketing-service .block__info {
-    order: 2;
-  }
-}
-
 .section-skills {
   padding: 0 0 5rem;
 }
-.section-promotion {
-  background: #000;
-}
-.section-promotion .inner {
-  width: 70vw;
-}
-@media (max-width: 1200px) {
-  .section-promotion .inner {
-    width: 90vw;
-  }
-}
-@media (max-width: 480px) {
-  .section-promotion .inner {
-    padding: 12rem 0;
-  }
-}
-.section-promotion .title-wrap {
-  text-align: center;
-  color: #FBFBFB;
-}
-
-@media (max-width: 480px) {
-  .team .inner {
-    padding: 7rem 0;
-  }
-}
-
 /* 가로모드 */
 @media screen and (max-width: 900px) and (orientation: landscape) {
   /* .home .fixed-section {
