@@ -166,7 +166,7 @@ const swiperFunc = function(){
 				// spaceBetween: 10,
 			},
 			1024: {
-				slidesPerView: 2.8,
+				slidesPerView: 3.2,
 				// spaceBetween: 20,
 			},
 		},
