@@ -1,1 +1,54 @@
 
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <style>
+    /* CSS 스타일 내용 생략 */
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer>
+    var currentQuestion = 1;
+
+    function nextQuestion() {
+      $(".question-container").hide();
+      $("#question" + currentQuestion).show();
+      currentQuestion++;
+    }
+
+    function showResult() {
+      var color = $("input[name='color']:checked").val();
+      var animal = $("input[name='animal']:checked").val();
+      var food = $("input[name='food']:checked").val();
+      var resultMessage = "당신은 " + color + "색을 좋아하며, " + animal + "을(를) 좋아하고, " + food + "을(를) 좋아합니다.";
+
+      $("#resultMessage").text(resultMessage);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="question-container" id="question1">
+      <h2>1. 내가 좋아하는 컬러는?</h2>
+      <input type="radio" name="color" value="빨강"> 빨강
+      <input type="radio" name="color" value="파랑"> 파랑
+      <button onclick="nextQuestion()">다음</button>
+    </div>
+    <div class="question-container" id="question2" style="display: none;">
+      <h2>2. 내가 좋아하는 동물은?</h2>
+      <input type="radio" name="animal" value="고양이"> 고양이
+      <input type="radio" name="animal" value="개"> 개
+      <button onclick="nextQuestion()">다음</button>
+    </div>
+    <div class="question-container" id="question3" style="display: none;">
+      <h2>3. 내가 좋아하는 음식은?</h2>
+      <input type="radio" name="food" value="피자"> 피자
+      <input type="radio" name="food" value="떡볶이"> 떡볶이
+      <button onclick="showResult()">결과 확인</button>
+      <p id="resultMessage"></p>
+    </div>
+  </div>
+</body>
+
+</html>
