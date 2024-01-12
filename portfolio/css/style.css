@@ -1712,6 +1712,129 @@ body {
   margin: 0 auto;
 }
 
+.section-hello {
+  background: #fff;
+  width: 100%;
+  height: 50rem;
+  text-align: center;
+  font-family: "Pretendard", "돋움", "Helvetica", Arial, sans-serif;
+}
+@media (max-width: 480px) {
+  .section-hello {
+    height: 33rem;
+  }
+}
+.section-hello .txt-outline {
+  max-width: 160rem;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 6rem;
+  font-weight: 800;
+  color: #FBFBFB;
+  text-shadow: -1px 0px #000, 0px 1px #000, 1px 0px #000, 0px -1px #000;
+  transition: all 0.3s;
+  text-align: left;
+}
+.section-hello .txt-outline::before {
+  display: inline-block;
+  content: "";
+  background: url(../images/star.png) no-repeat left/3rem auto;
+  width: 4rem;
+  height: 3rem;
+}
+@media (max-width: 480px) {
+  .section-hello .txt-outline {
+    font-size: 5rem;
+  }
+}
+.section-hello .txt-outline.is-fill {
+  display: block;
+  text-indent: 0;
+  color: #000;
+  transition: all 0.3s;
+  text-shadow: none;
+  font-weight: 700;
+  animation: shake-ani 0.3s linear;
+  text-indent: 20px;
+}
+@keyframes shake-ani {
+  0% {
+    transform: translate(3px);
+  }
+  50% {
+    transform: translate(-3px);
+  }
+  70% {
+    transform: translate(3px);
+  }
+  100% {
+    transform: translate(-3px);
+  }
+}
+
+.message {
+  position: relative;
+  margin: 0 auto;
+  width: min(300px, 100vw - 32px);
+  height: 32rem;
+  border-radius: 3rem;
+  background: #FBFBFB;
+  opacity: 0;
+  transform: scale(0.1);
+}
+
+.message.is-active {
+  opacity: 1;
+  transform: scale(1);
+  animation: moveToTop 1.5s ease;
+}
+
+.m {
+  width: auto;
+  position: absolute;
+  padding: 2rem;
+  background: #DC8C73;
+  color: #FBFBFB;
+  border-radius: 4rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.m.is-active {
+  opacity: 1;
+}
+
+.m1 {
+  top: 4rem;
+  left: -6rem;
+  background: rgba(231, 231, 231, 0.5);
+  color: #000;
+}
+
+.m2 {
+  top: 14rem;
+  right: -6rem;
+  border-top-right-radius: 0;
+}
+
+.m3 {
+  top: 22rem;
+  right: -6rem;
+}
+
+.m1.is-active {
+  animation: moveToTop 1.2s ease;
+}
+
+.m2.is-active {
+  animation: moveToTop 1.4s ease;
+}
+
+.m3.is-active {
+  animation: moveToTop 1.6s ease;
+}
+
 .fixed-content {
   padding: 10rem 0 0;
   max-width: 1000px;

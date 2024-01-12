@@ -316,6 +316,25 @@ $(window).scroll(function(){
 
 		let scroll = $(window).scrollTop();
 		let scrollTop = scroll + window.outerHeight;
+
+		// hello섹션 | 텍스트 채우기
+		let $sectionHelloTop = $('.section-hello').offset().top
+		if(scroll > $sectionHelloTop - 500 ) {
+			$('.section-hello .txt1').addClass('is-fill')
+		}else {
+			$('.section-hello .txt1').removeClass('is-fill')
+		}
+		if(scroll > $sectionHelloTop - 300 ) {
+			$('.section-hello .txt2').addClass('is-fill')
+		}else {
+			$('.section-hello .txt2').removeClass('is-fill')
+		}
+		if(scroll > $sectionHelloTop - 50 ) {
+			$('.section-hello .txt3').addClass('is-fill')
+		}else {
+			$('.section-hello .txt3').removeClass('is-fill')
+		}
+
 	
 		// 프로그레스 라인 애니
 		let $lineItemTop1 = $(".line-item").eq(0).offset().top
