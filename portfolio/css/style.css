@@ -602,7 +602,7 @@ body {
   justify-content: center;
   width: 6rem;
   height: 6rem;
-  background: rgba(231, 231, 231, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 100%;
   font-size: 2em;
 }
@@ -640,7 +640,7 @@ body {
 .list-type3 .progress {
   width: 2px;
   height: 20rem;
-  background: rgba(231, 231, 231, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   position: relative;
   left: 49%;
   top: 17%;
@@ -1071,7 +1071,7 @@ body {
 @media (max-width: 768px) {
   .swiper-drag .swiper-horizontal > .swiper-scrollbar,
 .swiper-drag .swiper-scrollbar.swiper-scrollbar-horizontal {
-    background: rgba(231, 231, 231, 0.5);
+    background: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -1366,7 +1366,7 @@ h1 a {
   height: 3.5rem;
   background: no-repeat center/80%;
   border-radius: 100%;
-  color: rgba(231, 231, 231, 0.5);
+  color: rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 1280px) {
   .footer__sns a {
@@ -1990,7 +1990,7 @@ body {
 .m1 {
   top: 4rem;
   left: -6rem;
-  background: rgba(231, 231, 231, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   color: #000;
 }
 
