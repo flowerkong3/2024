@@ -109,20 +109,30 @@ const parallaxFunc = function(){
 	let fadeTxt1 = document.querySelector(".txt1");
 	let fadeTxt2 = document.querySelector(".txt2");
 	let fadeTxt3 = document.querySelector(".txt3");
-
+	let decoWave = document.querySelector(".deco-wave")
+	let introduceEye = document.querySelector(".introduce-eye")
+	let sectionHello = document.querySelector(".section-hello")
+	
+	
 	window.addEventListener("scroll", () => {
 		scroll = window.scrollY;
 		heroInner.style.transform = `translateY(${scroll/100}%)`;
 		heroBg.style.marginTop = (scroll / 20 ) + "%";
 		// fadeTxtWrap.style.top = (scroll / 7 ) + "%";
-		// fadeTxtWrap.style.paddingTop = (scroll / 30 ) + "%";
-		if(scroll > window.innerHeight / 1.5) {
+		// fadeTxtWrap.style.marginTop = (scroll / 30 ) + "%";
+		if(scroll > window.innerHeight / 1.2) {
+			// fadeTxtWrap.style.display = 'none'
 			heroBg.style.marginTop = 0;
 			heroBg.classList.add("active");
+			introduceEye.style.transform = `translateY(${scroll/100}%)`;
+			decoWave.style.transform = `translateX(${scroll/50 - 220 }%)`;
 		}else {
 			heroBg.classList.remove("active");
-
+			// fadeTxtWrap.style.display = 'block'
 		}
+		
+		
+
 		
 
 			// 바운스 현상때문에 fixed된 이미지 잔상이 남음 --> absolute로 변경
@@ -312,28 +322,28 @@ const mobileMenuFunc = function(){
 }
 
 
+// hello섹션 | 텍스트 채우기
 $(window).scroll(function(){
-
 		let scroll = $(window).scrollTop();
 		let scrollTop = scroll + window.outerHeight;
 
-		// hello섹션 | 텍스트 채우기
 		let $sectionHelloTop = $('.section-hello').offset().top
 		if(scroll > $sectionHelloTop - 500 ) {
-			$('.section-hello .txt1').addClass('is-fill')
+			$('.section-hello .txt1').addClass('is-fill');
 		}else {
 			$('.section-hello .txt1').removeClass('is-fill')
 		}
-		if(scroll > $sectionHelloTop - 300 ) {
+		if(scroll > $sectionHelloTop - 250 ) {
 			$('.section-hello .txt2').addClass('is-fill')
 		}else {
 			$('.section-hello .txt2').removeClass('is-fill')
 		}
-		if(scroll > $sectionHelloTop - 50 ) {
+		if(scroll > $sectionHelloTop - 0 ) {
 			$('.section-hello .txt3').addClass('is-fill')
 		}else {
 			$('.section-hello .txt3').removeClass('is-fill')
 		}
+
 
 	
 		// 프로그레스 라인 애니
